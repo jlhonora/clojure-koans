@@ -25,9 +25,11 @@
 
 
 (defn factorial [n]
-  (if (<= n 2)
-    n
-    (* n (factorial (dec n)))))
+  (loop [n   n
+         acc 1]
+    (if (= n 1)
+      acc
+      (recur (dec n) (* acc n)))))
 
 (meditations
   "Recursion ends with a base case"
