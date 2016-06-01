@@ -22,6 +22,7 @@
     )
   )
 )
+;; alternative: (reduce conj '() coll))
 
 
 (defn factorial [n]
